@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77FA8E98-0D1E-468C-9FF5-5E17EF7029AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tests</RootNamespace>
+    <AssemblyName>Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'dev|AnyCPU'">
+    <OutputPath>bin\dev\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'dev|x64'">
+    <OutputPath>bin\x64\dev\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'int|AnyCPU'">
+    <OutputPath>bin\int\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'int|x64'">
+    <OutputPath>bin\x64\int\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'qa|AnyCPU'">
+    <OutputPath>bin\qa\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'qa|x64'">
+    <OutputPath>bin\x64\qa\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'pie|AnyCPU'">
+    <OutputPath>bin\pie\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'pie|x64'">
+    <OutputPath>bin\x64\pie\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'stg|AnyCPU'">
+    <OutputPath>bin\stg\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'stg|x64'">
+    <OutputPath>bin\x64\stg\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'prf|AnyCPU'">
+    <OutputPath>bin\prf\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'prf|x64'">
+    <OutputPath>bin\x64\prf\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\packages\Autofac.4.6.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Castle.Core.4.0.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.Win32.Primitives.4.0.1\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NSubstitute, Version=2.0.2.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\NSubstitute.2.0.2\lib\net45\NSubstitute.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NSubstituteAutoMocker, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\NSubstituteAutoMocker.1.1.0.0\lib\net45\NSubstituteAutoMocker.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.AppContext.4.1.0\lib\net46\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Console.4.0.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Diagnostics.DiagnosticSource.4.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Diagnostics.Tracing.4.1.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Globalization.Calendars.4.0.1\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.IO.4.1.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.IO.Compression.4.1.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.IO.Compression.ZipFile.4.0.1\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.IO.FileSystem.4.0.1\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Net.Http.4.1.0\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Net.Sockets.4.1.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Reflection.4.1.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reflection.TypeExtensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Reflection.TypeExtensions.4.1.0\lib\net462\System.Reflection.TypeExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Runtime.4.1.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Runtime.Extensions.4.1.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Runtime.InteropServices.4.1.0\lib\net462\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Security.Cryptography.Algorithms.4.2.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Security.Cryptography.Encoding.4.0.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Security.Cryptography.Primitives.4.0.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\System.Security.Cryptography.X509Certificates.4.1.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Shared\\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AccountControllerTest\AccountControllerFixture.cs" />
+    <Compile Include="Controller\AccountControllerTest\AccountControllerTest.cs" />
+    <Compile Include="Controller\BaseFixture.cs" />
+    <Compile Include="Controller\CaseControllerTest\CaseControllerFixture.cs" />
+    <Compile Include="Controller\CaseControllerTest\CaseControllerTest.cs" />
+    <Compile Include="Controller\NoteControllerTest\NoteControllerTest.cs" />
+    <Compile Include="Controller\NoteControllerTest\NoteControllerFixture.cs" />
+    <Compile Include="Controller\PartnerControllerTest\PartnerControllerFixture.cs" />
+    <Compile Include="Controller\PartnerControllerTest\PartnerControllerTest.cs" />
+    <Compile Include="Controller\QMasterControllerTest\QMasterControllerFixture.cs" />
+    <Compile Include="Controller\TakeActionControllerTest\TakeActionControllerFixture.cs" />
+    <Compile Include="Controller\TakeActionControllerTest\TakeActionControllerTest.cs" />
+    <Compile Include="Controller\Transaction\TransactionControllerFixture.cs" />
+    <Compile Include="Controller\Transaction\TransactionControllerTest.cs" />
+    <Compile Include="HomeControllerTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controller\QMasterControllerTest\QMasterControllerTest.cs" />
+    <Compile Include="ValuesControllerTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Content Include="CaseConfiguration\CreateCase.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="metadata.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CaseConfiguration\UpdateCase.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Shared\Gdot.Care.Common\Gdot.Care.Common\Gdot.Care.Common.csproj">
+      <Project>{c33d1bbc-a23e-4206-a2b2-4cedd8669618}</Project>
+      <Name>Gdot.Care.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Account\CareGateway.Account.Controller\CareGateway.Account.Controller.csproj">
+      <Project>{eca9c9fc-a226-4b5d-b722-32efade8fe91}</Project>
+      <Name>CareGateway.Account.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Account\CareGateway.Account.Logic\CareGateway.Account.Logic.csproj">
+      <Project>{95363008-55a8-40c6-81c7-bbb3f686c4b4}</Project>
+      <Name>CareGateway.Account.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Account\CareGateway.Account.Model\CareGateway.Account.Model.csproj">
+      <Project>{a1e891b6-f7dc-4caf-8fd6-f7711ed8c3ed}</Project>
+      <Name>CareGateway.Account.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CareGateway\CareGateway.csproj">
+      <Project>{482c9136-d312-464e-ad06-ffe74d6e51d1}</Project>
+      <Name>CareGateway</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Db\CareGateway.Db.Note.Model\CareGateway.Db.Note.Model.csproj">
+      <Project>{31d6589a-b768-401e-9948-02cf04c9ed04}</Project>
+      <Name>CareGateway.Db.Note.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Db\CareGateway.Db.PartnerAuthentication.Model\CareGateway.Db.PartnerAuthentication.Model.csproj">
+      <Project>{541E8E59-D02F-49D4-AE9E-A4F577BCBC94}</Project>
+      <Name>CareGateway.Db.PartnerAuthentication.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Db\CareGateway.Db.QMaster.Model\CareGateway.Db.QMaster.Model.csproj">
+      <Project>{91bd5da5-8e16-423a-b773-5b21b6754791}</Project>
+      <Name>CareGateway.Db.QMaster.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External\CareGateway.External.Client\CareGateway.External.Client.csproj">
+      <Project>{7733081d-a052-43f3-ae51-e2e80c01a48d}</Project>
+      <Name>CareGateway.External.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External\CareGateway.External.Model\CareGateway.External.Model.csproj">
+      <Project>{66d94fc3-0f99-4fb3-8b4c-29ab57773eeb}</Project>
+      <Name>CareGateway.External.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Note\CareGateway.Note.Controller\CareGateway.Note.Controller.csproj">
+      <Project>{f53bcb4f-f97b-4cd7-ad43-4f5db95ba5c5}</Project>
+      <Name>CareGateway.Note.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Note\CareGateway.Note.Logic\CareGateway.Note.Logic.csproj">
+      <Project>{5d6db9e0-9e5a-4d0e-8dee-8d6e712034bb}</Project>
+      <Name>CareGateway.Note.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Note\CareGateway.Note.Model\CareGateway.Note.Model.csproj">
+      <Project>{968614ff-b54a-457c-bf27-0791ce897760}</Project>
+      <Name>CareGateway.Note.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Partner\CareGateway.Partner.Controller\CareGateway.Partner.Controller.csproj">
+      <Project>{71b292f0-9454-4171-9181-0993ec841079}</Project>
+      <Name>CareGateway.Partner.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Partner\CareGateway.Partner.Logic\CareGateway.Partner.Logic.csproj">
+      <Project>{93ce1372-63ea-419e-9d5f-021ac7d9fb50}</Project>
+      <Name>CareGateway.Partner.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Partner\CareGateway.Partner.Model\CareGateway.Partner.Model.csproj">
+      <Project>{2f544de8-d6dc-49ab-acfb-d1879c846795}</Project>
+      <Name>CareGateway.Partner.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QMaster\CareGateway.QMaster.Controller\CareGateway.QMaster.Controller.csproj">
+      <Project>{5c8bc751-f138-42f6-9e70-fba01e468fdc}</Project>
+      <Name>CareGateway.QMaster.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QMaster\CareGateway.QMaster.Logic\CareGateway.QMaster.Logic.csproj">
+      <Project>{f3f4e072-3974-4e3b-9c07-38763cd7265a}</Project>
+      <Name>CareGateway.QMaster.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QMaster\CareGateway.QMaster.Model\CareGateway.QMaster.Model.csproj">
+      <Project>{2fb8f85b-582b-48d4-9f63-4ed97e76617b}</Project>
+      <Name>CareGateway.QMaster.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sfdc\CareGateway.Sfdc.Controller\CareGateway.Sfdc.Controller.csproj">
+      <Project>{D5B041D4-B421-4AC7-A052-C86E39BF2443}</Project>
+      <Name>CareGateway.Sfdc.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sfdc\CareGateway.Sfdc.Logic\CareGateway.Sfdc.Logic.csproj">
+      <Project>{F06E6B1C-BBD0-4A5D-A3FE-D2375521B530}</Project>
+      <Name>CareGateway.Sfdc.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sfdc\CareGateway.Sfdc.Model\CareGateway.Sfdc.Model.csproj">
+      <Project>{61D7C2D7-2CB4-4A9D-9E40-9DCEB2E36C89}</Project>
+      <Name>CareGateway.Sfdc.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TakeAction\CareGateway.TakeAction.Controller\CareGateway.TakeAction.Controller.csproj">
+      <Project>{AB27031A-BBF6-47A7-BA3A-6BE784226C3A}</Project>
+      <Name>CareGateway.TakeAction.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TakeAction\CareGateway.TakeAction.Logic\CareGateway.TakeAction.Logic.csproj">
+      <Project>{CFA072DB-2195-4B84-9860-357A46C4D08F}</Project>
+      <Name>CareGateway.TakeAction.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TakeAction\CareGateway.TakeAction.Model\CareGateway.TakeAction.Model.csproj">
+      <Project>{2271FEBC-EE93-4D3A-A349-51FE9E0AFA1F}</Project>
+      <Name>CareGateway.TakeAction.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transaction\CareGateway.Transaction.Controller\CareGateway.Transaction.Controller.csproj">
+      <Project>{11e0a0b6-eee6-4524-9054-d417f45ab30f}</Project>
+      <Name>CareGateway.Transaction.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transaction\CareGateway.Transaction.Logic\CareGateway.Transaction.Logic.csproj">
+      <Project>{6bcbd010-787b-4e76-b0a2-75b646fa3f99}</Project>
+      <Name>CareGateway.Transaction.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transaction\CareGateway.Transaction.Model\CareGateway.Transaction.Model.csproj">
+      <Project>{0f8b4325-5906-4b5e-babf-2cd4e7fc429a}</Project>
+      <Name>CareGateway.Transaction.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\..\..\Shared\packages\OctoPack.3.5.2\build\OctoPack.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\Shared\packages\OctoPack.3.5.2\build\OctoPack.targets'))" />
+    <Error Condition="!Exists('..\..\..\..\..\..\Shared\packages\OctoPack.Precompile.2.0.1\build\OctoPack.Precompile.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\Shared\packages\OctoPack.Precompile.2.0.1\build\OctoPack.Precompile.targets'))" />
+  </Target>
+  <Import Project="..\..\..\..\..\..\Shared\packages\OctoPack.3.5.2\build\OctoPack.targets" Condition="Exists('..\..\..\..\..\..\Shared\packages\OctoPack.3.5.2\build\OctoPack.targets')" />
+  <Import Project="..\..\..\..\..\..\Shared\packages\OctoPack.Precompile.2.0.1\build\OctoPack.Precompile.targets" Condition="Exists('..\..\..\..\..\..\Shared\packages\OctoPack.Precompile.2.0.1\build\OctoPack.Precompile.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

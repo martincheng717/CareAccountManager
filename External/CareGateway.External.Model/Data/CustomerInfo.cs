@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CareGateway.External.Model.Data
+{
+    public class CustomerInfo
+    {
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string Last4SSN { get; set; }
+
+        public string AccountState { get; set; }
+
+        public string AccountIdentifier { get; set; }
+
+        public string AccountNumber { get; set; }
+    }
+}

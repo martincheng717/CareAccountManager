@@ -1,0 +1,32 @@
+﻿[
+  {
+    "EventType": "TransactionService_GetAccountTransactionHistoryAsync",
+    "Maps": [
+      {
+        "ExternalResponseCode": "InvalidParameter",
+        "ErrorCode": 42201,
+        "ErrorName": "InvalidParameter"
+      },
+      {
+        "ExternalResponseCode": "AccountNotFound",
+        "ErrorCode": 42202,
+        "ErrorName": "AccountNotFound"
+      },
+      {
+        "ExternalResponseCode": "SystemUnavailable",
+        "ErrorCode": 42203,
+        "ErrorName": "SystemUnavailable"
+      },
+      {
+        "ExternalResponseCode": "PartnerException",
+        "ErrorCode": 42204,
+        "ErrorName": "PartnerException"
+      },
+      {
+        "ExternalResponseCode": "GeneralSystemException",
+        "ErrorCode": 42205,
+        "ErrorName": "GeneralSystemException"
+      }
+    ]
+  }
+]

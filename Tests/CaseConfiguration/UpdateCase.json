@@ -1,0 +1,109 @@
+﻿{
+  "Fields": [
+    {
+      "Name": "RecordType",
+      "Required": true
+    },
+    {
+      "Name": "CaseNumber",
+      "Required": true
+    },
+    {
+      "Name": "AccountIdentifier",
+      "Required": true
+    },
+    {
+      "Name": "First_Name__c",
+      "Required": true
+    },
+    {
+      "Name": "Last_Name__c",
+      "Required": true
+    },
+    {
+      "Name": "Customer_Name__c",
+      "Required": false
+    },
+    {
+      "Name": "SuppliedName",
+      "Required": false
+    },
+    {
+      "Name": "Customer_Email__c",
+      "Required": false
+    },
+    {
+      "Name": "DOB2__c",
+      "Required": false
+    },
+    {
+      "Name": "Masked_SSN2__c",
+      "Required": false
+    },
+    {
+      "Name": "Status",
+      "Required": false,
+      "PickList": [
+        "OFAC Approve",
+        "OFAC Referred"
+      ]
+    },
+    {
+      "Name": "OFAC_Status__c",
+      "Required": false,
+      "PickList": [
+        "OFAC Approve",
+        "OFAC Referred"
+      ]
+    },
+    {
+      "Name": "Subject",
+      "DefaultValue": "OFAC Potential Match"
+    },
+    {
+      "Name": "Type__c",
+      "Required": false
+    },
+    {
+      "Name": "Mobile_Phone2__c",
+      "Required": false
+    },
+    {
+      "Name": "Customer_Mobile_Phone__c",
+      "Required": false
+    },
+    {
+      "Name": "SuppliedPhone",
+      "Required": false
+    },
+    {
+      "Name": "Residential_Address__c",
+      "Required": false
+    },
+    {
+      "Name": "Residential_City__c",
+      "Required": false
+    },
+    {
+      "Name": "Residential_State__c",
+      "Required": false
+    },
+    {
+      "Name": "Residential_Zip__c",
+      "Required": false
+    },
+    {
+      "Name": "Brand_OFAC__c",
+      "Required": false,
+      "DefaultValue": "Wave"
+    },
+    {
+      "Name": "GroupName",
+      "Required": false
+    },
+    {
+      "Name": "CaseOwner",
+      "Required": false
+    }
+  ]
+}

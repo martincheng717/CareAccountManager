@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F06E6B1C-BBD0-4A5D-A3FE-D2375521B530}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CareGateway.Sfdc.Logic</RootNamespace>
+    <AssemblyName>CareGateway.Sfdc.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'dev|AnyCPU'">
+    <OutputPath>bin\dev\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'dev|x64'">
+    <OutputPath>bin\x64\dev\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'int|AnyCPU'">
+    <OutputPath>bin\int\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'int|x64'">
+    <OutputPath>bin\x64\int\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'qa|AnyCPU'">
+    <OutputPath>bin\qa\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'qa|x64'">
+    <OutputPath>bin\x64\qa\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'pie|AnyCPU'">
+    <OutputPath>bin\pie\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'pie|x64'">
+    <OutputPath>bin\x64\pie\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'stg|AnyCPU'">
+    <OutputPath>bin\stg\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'stg|x64'">
+    <OutputPath>bin\x64\stg\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'prf|AnyCPU'">
+    <OutputPath>bin\prf\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'prf|x64'">
+    <OutputPath>bin\x64\prf\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AttributeCaching, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Shared\packages\AttributeCaching.2.0.3\lib\net45\AttributeCaching.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AutoMapper, Version=6.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Shared\packages\AutoMapper.6.1.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Shared\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Salesforce.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9f7864e53fb79388, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Shared\packages\DeveloperForce.Force.1.3.2\lib\Salesforce.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Salesforce.Force, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9f7864e53fb79388, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Shared\packages\DeveloperForce.Force.1.3.2\lib\Salesforce.Force.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Shaspect, Version=1.2.0.0, Culture=neutral, PublicKeyToken=1a025256a2d0d936, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\..\Shared\packages\Shaspect.1.2.0\lib\net45\Shaspect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaseRepository.cs" />
+    <Compile Include="CaseClientProxy\Model\ClientEnum.cs" />
+    <Compile Include="CaseManager.cs" />
+    <Compile Include="ICaseManager.cs" />
+    <Compile Include="ICaseRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordTypes\IRecordType.cs" />
+    <Compile Include="RecordTypes\Ofac.cs" />
+    <Compile Include="CaseClientProxy\SalesForceClientProxy.cs" />
+    <Compile Include="CaseClientProxy\Model\GetForceClientRequest.cs" />
+    <Compile Include="CaseClientProxy\ICaseClientProxy.cs" />
+    <Compile Include="CaseClientProxy\Model\ProxyDescribeGlobalResult.cs" />
+    <Compile Include="CaseClientProxy\Model\ProxyQueryResult.cs" />
+    <Compile Include="CaseService\ICaseService.cs" />
+    <Compile Include="CaseClientProxy\Model\ProxySuccessResponse.cs" />
+    <Compile Include="CaseService\CaseService.cs" />
+    <Compile Include="SfdcSetting.cs" />
+    <Compile Include="Tasks\CaseValidationTask.cs" />
+    <Compile Include="Tasks\GetDataFromExternalTask.cs" />
+    <Compile Include="Tasks\ICaseTask.cs" />
+    <Compile Include="Tasks\RecordTypeFieldMapperTask.cs" />
+    <Compile Include="Tasks\SetDefaultValueTask.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\Shared\Gdot.Care.Common\Gdot.Care.Common\Gdot.Care.Common.csproj">
+      <Project>{c33d1bbc-a23e-4206-a2b2-4cedd8669618}</Project>
+      <Name>Gdot.Care.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Db\CareGateway.Db.PartnerAuthentication.Logic\CareGateway.Db.PartnerAuthentication.Logic.csproj">
+      <Project>{692DF808-1485-40A5-9AF1-61AB21A11A5B}</Project>
+      <Name>CareGateway.Db.PartnerAuthentication.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Db\CareGateway.Db.PartnerAuthentication.Model\CareGateway.Db.PartnerAuthentication.Model.csproj">
+      <Project>{541E8E59-D02F-49D4-AE9E-A4F577BCBC94}</Project>
+      <Name>CareGateway.Db.PartnerAuthentication.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\External\CareGateway.External.Client\CareGateway.External.Client.csproj">
+      <Project>{7733081d-a052-43f3-ae51-e2e80c01a48d}</Project>
+      <Name>CareGateway.External.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\External\CareGateway.External.Model\CareGateway.External.Model.csproj">
+      <Project>{66d94fc3-0f99-4fb3-8b4c-29ab57773eeb}</Project>
+      <Name>CareGateway.External.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\External\CareGateway.External.Model\CareGateway.External.Model.csproj">
+      <Project>{66D94FC3-0F99-4FB3-8B4C-29AB57773EEB}</Project>
+      <Name>CareGateway.External.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CareGateway.Sfdc.Model\CareGateway.Sfdc.Model.csproj">
+      <Project>{61D7C2D7-2CB4-4A9D-9E40-9DCEB2E36C89}</Project>
+      <Name>CareGateway.Sfdc.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Content Include="CaseConfiguration\Ofac.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\..\..\..\..\Shared\packages\Shaspect.1.2.0\build\net45\Shaspect.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\..\Shared\packages\Shaspect.1.2.0\build\net45\Shaspect.targets'))" />
+  </Target>
+  <Import Project="..\..\..\..\..\..\..\Shared\packages\Shaspect.1.2.0\build\net45\Shaspect.targets" Condition="Exists('..\..\..\..\..\..\..\Shared\packages\Shaspect.1.2.0\build\net45\Shaspect.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

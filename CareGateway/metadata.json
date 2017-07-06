@@ -1,0 +1,37 @@
+﻿{
+  "ExternalApi": [
+    {
+      "Name": "CRMCoreService",
+      "Url": "https://fwsvc/crmcoreservice/v1/api"
+    },
+    {
+      "Name": "PartnerService",
+      "Url": "https://cssvc.apple.com/api/v1"
+    },
+    {
+      "Name": "RiskService",
+      "Url": "https://fwsvc/RiskManagementAPI/V1"
+    }
+  ],
+  "PartnerApiHeader": [
+    {
+      "Name": "X-Apple-Client-App-Name",
+      "Value": "GDTCRM"
+    },
+    {
+      "Name": "X-Apple-User-ID",
+      "Value": "2304362810"
+    }
+  ],
+  "Log4Net": {
+    "ErrorPath": "C:\\tmp\\Gdot_FW_Care_Error.log"
+  },
+  "ApiConnectionTimeoutInSec": "60",
+  "DatabaseConnectionTimeoutInSec": "60",
+  "Sfdc": [
+    { 
+      "RecordType": "Wave OFAC",
+      "CaseSettingPath": "Ofac.json"
+    }
+  ]
+}
